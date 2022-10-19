@@ -1,0 +1,33 @@
+@import "/src/styles/variables.scss";
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  height: 300px;
+
+  .answer {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    padding: 11px;
+    margin-top: 8px;
+    border: 2px solid $color-theme-coral;
+    border-radius: 8px;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .activeAnswer {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    padding: 11px;
+    margin-top: 8px;
+    border: 2px solid $color-theme-coral;
+    border-radius: 8px;
+    background-color: $color-theme-coral;
+    cursor: pointer;
+  }
+}

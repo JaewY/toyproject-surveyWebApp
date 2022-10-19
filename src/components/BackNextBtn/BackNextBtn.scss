@@ -1,0 +1,32 @@
+@import "/src/styles/variables.scss";
+
+.backNextBtn {
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+
+  .backBtn {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    font-size: $font-M;
+    font-weight: bold;
+    color: $color-text-gray;
+    cursor: pointer;
+  }
+
+  .nextBtn {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    font-size: $font-M;
+    font-weight: bold;
+    color: $color-theme-coral;
+    cursor: pointer;
+
+    &:disabled {
+      cursor: default;
+      color: $color-button-lightGray;
+    }
+  }
+}

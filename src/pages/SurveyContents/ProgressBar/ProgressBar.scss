@@ -1,0 +1,26 @@
+@import "/src/styles/variables.scss";
+
+.progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-left: 50px;
+
+  .progressCircleOff {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    border-radius: 50%;
+    border: 3px solid $color-button-lightGray;
+  }
+
+  .progressCircleOn {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    border-radius: 50%;
+    background-color: $color-theme-coral;
+  }
+}
