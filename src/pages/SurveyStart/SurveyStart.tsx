@@ -45,15 +45,15 @@ function SurveyStart() {
   };
 
   useEffect(() => {
-    try {
-      (async () => {
+    (async () => {
+      try {
         const res = await axios.get("http://localhost:3000/data/surveys.json");
         const { data } = res;
         setSurveys(data.surveys[`${id}`]);
-      })();
-    } catch (err) {
-      console.log("Error", err);
-    }
+      } catch (err) {
+        console.log("Error", err);
+      }
+    })();
   }, [id]);
 
   return (

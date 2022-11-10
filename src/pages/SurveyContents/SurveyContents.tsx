@@ -94,30 +94,30 @@ function SurveyContents() {
   };
 
   useEffect(() => {
-    try {
-      (async () => {
+    (async () => {
+      try {
         const res = await axios.get(
           "http://localhost:3000/data/questions.json",
         );
         const { data } = res;
         setQuestions(qIndex.map((e) => data.questions[e]));
-      })();
-    } catch (err) {
-      console.log("Error", err);
-    }
+      } catch (err) {
+        console.log("Error", err);
+      }
+    })();
   }, [location.pathname]);
 
   useEffect(() => {
-    try {
-      (async () => {
+    (async () => {
+      try {
         const res = await axios.get("http://localhost:3000/data/answers.json");
         const { data } = res;
         const aIndex = questions.map((e) => e.answers);
         setAnswers(aIndex[activeQuestion].map((e) => data.answers[e]));
-      })();
-    } catch (err) {
-      console.log("Error", err);
-    }
+      } catch (err) {
+        console.log("Error", err);
+      }
+    })();
   }, [questions, activeQuestion]);
 
   useEffect(() => {
